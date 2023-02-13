@@ -3,7 +3,7 @@
 __pycache__  
 myvenv 
 ../env
-db.sqlite3  
+# db.sqlite3  
 .DS_Store 
 .env
 *.env
@@ -13,7 +13,7 @@ db.sqlite3
 *.pot
 *.pyc
 __pycache__
-db.sqlite3
+# db.sqlite3
 # media
 
 # Backup files # 
