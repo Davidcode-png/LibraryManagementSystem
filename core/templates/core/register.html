@@ -31,13 +31,19 @@
                   {{field}}
                 </div>
                   {% endfor %}
-                  
+                  <div class="alert alert-danger">
+                  {% for field in form %}
+                    {% comment %} <a class="close" href="#" data-dismiss="alert">×</a> {% endcomment %}
+                    <p>{{ field.errors}}</p>
+                    {% endfor %}
+
+                  </div>
   
                   <!-- Submit button -->
                   <button type="submit" class="btn btn-primary btn-block mb-4">
                     Sign up
                   </button>
-                
+
                 </form>
               </div>
             </div>

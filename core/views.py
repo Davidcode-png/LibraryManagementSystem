@@ -4,6 +4,9 @@ from django.contrib.auth import login,authenticate,logout
 from .forms import CustomUserCreationForm
 from .models import Book, IssuedBook
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
+
+
 def home(request):
     return render(request,'core/index.html')
 
@@ -16,7 +19,8 @@ def sign_in(request):
             login(request,user)
             return redirect('view_issued')
         else:
-            print('Error')
+            messages.error(request,'Username or password not correct')
+            return redirect('sign_in')
     return render(request,'core/login.html')
 
 def sign_up(request):
